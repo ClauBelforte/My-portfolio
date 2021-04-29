@@ -1,0 +1,14 @@
+<?php
+$destinatario = 'claubelforte@outlook.com';
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+$header = "Mensaje:";
+$mensajeCompleto = $message . "\nAtentamente\n" . $name;
+
+mail($destinatario, $email, $mensajeCompleto, $header);
+echo "<script>setTimeout(\"location.href='sent.html'\",1000)</script>";
+
+?>
